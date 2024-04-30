@@ -7,15 +7,32 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: [
-        ListTile(
-          title: const Text('Cubits'),
-          subtitle: const Text('Gestor de estado simple'),
-          trailing: const Icon(Icons.arrow_forward_ios_rounded),
-          onTap: () => context.push('/cubits'),
-        )
-      ],
-    ));
+      body: ListView(
+        children: [
+          ListTile(
+            title: const Text('Cubits'),
+            subtitle: const Text('Simple State Gestor'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            onTap: () => context.push('/cubits'),
+          ),
+          ListTile(
+            title: const Text('BLoC'),
+            subtitle: const Text('Composite State Gestor'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            onTap: () => context.push('/counter-bloc'),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Divider(),
+          ),
+          ListTile(
+            title: const Text('New User'),
+            subtitle: const Text('Using forms'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            onTap: () => context.push('/new-user'),
+          ),
+        ],
+      ),
+    );
   }
 }
